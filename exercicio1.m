@@ -12,14 +12,15 @@ t = zeros(imax,1);
 t(1)=x0;
 erro = zeros (imax,1);
 
-for k=1:imax
+for =1:imax
 
     if k~=1
         t(k+1)=t(k)-func(t(k))/func_d(t(k));
         erro(k)=abs((t(k)-t(k-1))/t(k));
-
-    if erro<es
-        break
+        if erro<es
+            break
+        endif
+    endif
 endfor
 
 t = t(k); % alterar
