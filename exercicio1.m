@@ -11,15 +11,15 @@ t = zeros(imax, 1);
 t(1) = x0;
 erro = zeros(imax, 1);
 
-for ii = 1:length(t)-1 %usar ii e n i pq i eh imaginarium
-  if ii ~= 1
-    erro(ii) = abs(t(ii) - t(ii-1))/t(ii); %abs é modulo
-    if erro(ii) < es
+for k = 1:length(t)-1 
+  if k ~= 1
+    erro(k) = abs(t(k) - t(k-1))/t(k)
+    if erro(k) < es
       break
     endif
   endif
-  t(ii+1) = t(ii) - func(t(ii))/func_d(t(ii)); %; faz sumir
+  t(k+1) = t(k) - func(t(k))/func_d(t(ii))
 endfor
-t = t(ii); % alterar
+t = t(k); % alterar
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
