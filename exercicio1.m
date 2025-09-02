@@ -14,7 +14,7 @@ erro = zeros (imax,1);
 
 for k=1:imax
 
-    if k=˜1
+    if k~=1
         t(k+1)=t(k)-func(t(k))/func_d(t(k));
         erro(k)=abs((t(k)-t(k-1))/t(k));
 
