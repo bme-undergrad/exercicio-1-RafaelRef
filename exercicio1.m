@@ -18,7 +18,7 @@ for k = 1:length(t)-1
       break
     endif
   endif
-  t(k+1) = t(k) - func(t(k))/func_d(t(ii))
+  t(k+1) = t(k) - func(t(k))/func_d(t(k))
 endfor
 t = t(k); % alterar
 
